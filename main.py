@@ -11,3 +11,7 @@ def rand_crypt(size):
     cipher = AES.new(key, AES.MODE_EAX)
     ciphertext, tag = cipher.encrypt_and_digest(b'%s'%plaintext) 
     return f'{escape(ciphertext)}'
+
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')
