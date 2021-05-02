@@ -1,0 +1,287 @@
+#!/bin/bash
+yum install python3-devel uwsgi-devel uuid-devel libcap-devel pcre-devel openssl-devel git -y
+yum groupinstall "Development Tools" -y
+amazon-linux-extras install nginx1
+mkdir  /var/www/
+gpasswd -a nginx ec2-user
+cd /var/www/
+git clone https://github.com/jossaq/sample-app.git
+cd sample-app/
+python3 -m venv .venv
+source .venv/bin/activate
+pip install pycryptodomex Flask
+deactivate
+cp /var/www/sample-app/sampleapp.service /etc/systemd/system/
+cp /var/www/sample-app/sampleapp /etc/nginx/conf.d/
+systemctl enable sampleapp
+systemctl enable nginx
+chown -R ec2-user:nginx /var/www
+chmod -R 755 /var/www/
+service sampleapp start
+service nginx start
+
+
+
+
+
+
+sudo cp sampleapp.service /etc/systemd/system/
+uwsgi -h
+mkdir app
+ls
+cd sample-app/
+ls
+source .venv/bin/activate
+python main.py
+flask run
+python main.py
+pip install wsgi
+pip install uwsgi
+pip install uwsgi
+yum install python36-devel uwsgi-devel uuid-devel libcap-devel pcre-devel openssl-devel
+pip install uwsgi
+sudo install python-devel
+sudo yum install python-devel
+sudo yum install python3-devel
+pip install uwsgi
+uwsgi --socket 0.0.0.0:5000 --protocol=http -w wsgi:app
+git pull
+uwsgi --socket 0.0.0.0:5000 --protocol=http -w wsgi:app
+cd sample-app/
+source .venv/bin/activate
+uwsgi --list-cheaper-algos
+uwsgi --cheaper-algos-list
+cd sample-app/
+source .venv/bin/activate
+git pull
+uwsgi --ini usgi.ini
+cd sample-app/
+git pull
+sudo systemctl start sampleapp.service
+ss
+ss -tunlp
+ls
+sudo systemctl status sampleapp.service
+cat /etc/group
+yum install -y ngninx
+sudo yum install -y nginx
+cat /etc/group
+sudo systemctl start sampleapp.service
+sudo systemctl daemon-reload
+sudo systemctl start sampleapp.service
+sudo systemctl status sampleapp.service
+cat /etc/passwd
+cat /etc/group
+groups ec2-user
+git pull
+sudo cp sampleapp.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl start sampleapp.service
+sudo systemctl status sampleapp.service
+ss -tunlp
+git pull
+sudo cp sampleapp /etc/nginx/sites-available/
+sudo cp sampleapp /etc/nginx1/sites-available/
+sudo find / -iname nginx
+ls /etc/nginx/
+ls /etc/nginx/conf.d/
+ls
+cat /etc/nginx/conf.d/
+cat /etc/nginx/nginx.conf
+sudo nginx -t
+sudo service nginx restart
+cat /etc/nginx/nginx.conf
+git pull
+sudo cp sampleapp.conf /etc/nginx/conf.d/
+sudo nginx -t
+sudo service nginx restart
+git pull
+sudo cp sampleapp.conf /etc/nginx/conf.d/
+sudo nginx -t
+sudo service nginx restart
+sudo less /var/log/nginx/error.log
+sudo ps -elf | grep nginx
+sudo ps -elf | grep python
+sudo ps -elf | grep sgi
+ls
+ls -alh
+sudo 
+sudo service nginx restart
+sudo less /var/log/nginx/error.log
+git pull
+sudo cp sampleapp.conf /etc/nginx/conf.d/
+sudo service nginx restart
+sudo less /var/log/nginx/error.log
+sudo gpasswd -a ec2-user nginx
+sudo cp sampleapp.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo service sampleapp restart
+sudo systemctl status sampleapp.service
+git pull
+sudo cp sampleapp.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo service sampleapp restart
+sudo systemctl status sampleapp.service
+sestatus
+ls -al
+cat /home/ec2-user/sample-app/usgi.sock
+pwd
+ls /home/ec2-user/sample-app/usgi.sock
+tail -f /home/ec2-user/sample-app/usgi.sock
+sudo service sampleapp stop
+ls -al
+sudo service sampleapp start
+ls -al
+git pull
+sudo service sampleapp restart
+ls -al
+git pull
+sudo service sampleapp restart
+ls -al
+sudo service sampleapp stop
+sudo service sampleapp start
+ls -al
+sudo service nginx reload
+git pull
+sudo service sampleapp restart
+ls -al
+cd sample-app/
+ls /
+git pull
+sudo cp sampleapp.conf /etc/nginx/conf.d/
+sudo service nginx restart
+sudo service sampleapp restart
+ls -al
+ls -al /run/
+sudo systemctl status sampleapp
+vi usgi.ini
+sudo service sampleapp restart
+sudo systemctl status sampleapp
+vi usgi.ini
+sudo service sampleapp restart
+sudo systemctl status sampleapp
+vi usgi.ini
+sudo service sampleapp restart
+sudo systemctl status sampleapp
+vi sampleapp.conf
+sudo service restart nginx
+sudo service nginx restart
+sudo cp sampleapp.conf /etc/nginx/conf.d/
+sudo service nginx restart
+vi sampleapp.conf
+sudo cp sampleapp.conf /etc/nginx/conf.d/
+sudo service nginx restart
+ls /tmp
+vi sampleapp.conf
+sudo cp sampleapp.conf /etc/nginx/conf.d/
+sudo service nginx restart
+git pull
+sudo cp sampleapp.service /etc/systemd/system
+sudo service restart sampleall
+sudo service sampleapp restart
+sudo systemct daemon-reload
+sudo systemctl daemon-reload
+sudo service sampleapp restart
+sudo service sampleapp status
+sudo cp sampleapp.conf /etc/nginx/conf.d/
+sudo service nginx restart
+cat sampleapp.conf
+git sash
+git stash
+git pull
+cat sampleapp.conf
+sudo cp sampleapp.conf /etc/nginx/conf.d/
+sudo service nginx restart
+sudo cp sampleapp.conf /etc/nginx/conf.d/
+sudo service nginx restart
+git pull
+sudo cp sampleapp.conf /etc/nginx/conf.d/
+git pull
+sudo service nginx restart
+git pull
+service sampleapp restart
+sudo service sampleapp restart
+sudo service sampleapp status
+cat usgi.ini
+git pull
+git stash
+git pull
+vi usgi.ini
+sudo service sampleapp restart
+sudo service sampleapp status
+cd sample-app/
+git pull
+git stash
+git pull
+sudo cp sampleapp.service /etc/systemd/system
+sudo systemctl daemon-reload
+sudo service sampleapp restart
+sudo service sampleapp status
+sudo journalctl -u sampleapp
+git pull
+sudo cp sampleapp.service /etc/systemd/system
+sudo systemctl daemon-reload
+sudo service sampleapp restart
+sudo service sampleapp status
+service nginx start
+sudo service nginx start
+git pull
+sudo cp sampleapp.conf /etc/nginx/conf.d/
+sudo service nginx restart
+cd ..
+sudo mkdir /var/www
+sudo cp -R sample-app/ /var/www/
+sudo chown ec2-user:nginx /var/www/
+cd /var/www/sample-app/
+ls
+rm usgi.
+rm usgi.sock
+ls
+sudo rm usgi.sock
+ls
+ll
+sudo chown -R ec2-user:nginx /var/www/
+ll
+
+ll
+vi usgi.ini
+cd -
+chown -R ec2-user:nginx sample-app/
+sudo service nginx restart
+sudo service sampleapp restart
+sudo service sampleapp status
+cd sample-app/
+ll
+curl localhost
+git pull
+sudo cp sampleapp.conf /etc/nginx/conf.d/
+sudo cp sampleapp.service /etc/systemd/system
+sudo systemctl daemon-reload
+sudo service nginx restart
+sudo service sampleapp restart
+sudo service sampleapp status
+sudo service nginx status
+ll
+netstat -tunlp
+sudo netstat -tunlp
+curl localhost
+curl localhost/app/15
+git pull
+sudo service sampleapp restart
+curl localhost
+audit2why -al
+ls /var
+ll /var
+touch /run/demo
+git pull
+sudo service sampleapp restart
+sudo cp sampleapp.conf /etc/nginx/conf.d/
+sudo service nginx restart
+git pull
+sudo cp sampleapp.conf /etc/nginx/conf.d/
+sudo service nginx restart
+curl localhost
+curl localhost/app/15
+history
+man history
+history | awk '{$1="";print substr($0,2)}'

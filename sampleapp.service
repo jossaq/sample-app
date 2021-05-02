@@ -7,7 +7,7 @@ User=ec2-user
 Group=nginx
 WorkingDirectory=/home/ec2-user/sample-app
 Environment="PATH=/home/ec2-user/sample-app/.venv/bin"
-ExecStart=/home/ec2-user/sample-app/.venv/bin/uwsgi --ini usgi.ini
+ExecStart=/var/www/sample-app/.venv/bin/uwsgi --ini usgi.ini
 PrivateTmp=No
 
 [Install]
