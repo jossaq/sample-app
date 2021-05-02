@@ -3,8 +3,8 @@ Description=uWSGI instance to serve sampla app
 After=network.target
 
 [Service]
-User=nginx
-Group=nginx
+User=ec2-user
+Group=ec2-user
 WorkingDirectory=/home/ec2-user/sample-app
 Environment="PATH=/home/ec2-user/sample-app/.venv/bin"
 ExecStart=/home/ec2-user/sample-app/.venv/bin/uwsgi --ini usgi.ini
