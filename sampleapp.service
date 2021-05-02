@@ -8,6 +8,7 @@ Group=nginx
 WorkingDirectory=/home/ec2-user/sample-app
 Environment="PATH=/home/ec2-user/sample-app/.venv/bin"
 ExecStart=/home/ec2-user/sample-app/.venv/bin/uwsgi --ini usgi.ini
+PrivateTmp=No
 
 [Install]
 WantedBy=multi-user.target
