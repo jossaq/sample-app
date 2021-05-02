@@ -5,8 +5,8 @@ After=network.target
 [Service]
 User=ec2-user
 Group=nginx
-WorkingDirectory=/home/ec2-user/sample-app
-Environment="PATH=/home/ec2-user/sample-app/.venv/bin"
+WorkingDirectory=/var/www/sample-app/
+Environment="PATH=/var/www/sample-app/.venv/bin"
 ExecStart=/var/www/sample-app/.venv/bin/uwsgi --ini usgi.ini
 PrivateTmp=No
 

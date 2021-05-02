@@ -9,10 +9,10 @@ git clone https://github.com/jossaq/sample-app.git
 cd sample-app/
 python3 -m venv .venv
 source .venv/bin/activate
-pip install pycryptodomex Flask
+pip install pycryptodomex Flask uwsgi
 deactivate
 cp /var/www/sample-app/sampleapp.service /etc/systemd/system/
-cp /var/www/sample-app/sampleapp /etc/nginx/conf.d/
+cp /var/www/sample-app/sampleapp.conf /etc/nginx/conf.d/
 systemctl enable sampleapp
 systemctl enable nginx
 chown -R ec2-user:nginx /var/www
